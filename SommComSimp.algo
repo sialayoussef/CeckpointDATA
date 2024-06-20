@@ -1,0 +1,21 @@
+ALGORITHM SommComSimp
+VAR
+    tab1 : ARRAY_OF INTEGER[] := [10,3,4,6];
+    tab2 : ARRAY_OF INTEGER[] := [10,20,3,4,1,2];
+    somme : INTEGER := 0;
+    i,j : INTEGER := 1;
+BEGIN
+    
+    FOR i FROM 1 TO tab1.length STEP 1  DO                
+        FOR j FROM 1  TO tab2.length STEP 1  DO
+            
+            IF (tab1[i] = tab2[j]) THEN
+                sum := sum + tab1[i]*2;
+                break
+            END_IF
+        END_FOR
+    END_FOR
+
+    Write(somme);
+
+END
